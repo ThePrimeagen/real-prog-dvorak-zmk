@@ -18,7 +18,7 @@
           flavor = "tap-preferred";
           bindings = <&kp>, <&kp>;
       };
-        gpipe: grave_pipe {
+gpipe: grave_pipe {
     compatible = "zmk,behavior-mod-morph";
     label = "grave_pipe";
     #binding-cells = <0>;
@@ -131,6 +131,13 @@ bhash: bslh_hash {
     bindings = <&kp BSLH>, <&kp HASH>;
     mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
 };
+acaret: at_caret {
+    compatible = "zmk,behavior-mod-morph";
+    label = "at_caret";
+    #binding-cells = <0>;
+    bindings = <&kp AT>, <&kp CARET>;
+    mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+};
     };
 
   keymap {
@@ -177,8 +184,8 @@ bhash: bslh_hash {
         &ppipe    &pkp_n1     &lkp_n2   &lkp_n3  &lkp_n4    &akp_n5 &tog 4                                                     &mo 3          &ekp_n6  &rkp_n7  &rkp_n8   &rkp_n9   &skp_n0  &eprcnt
         &kp TAB   &kp SEMI    &kp COMMA &kp DOT  &kp P      &kp Y   &none                                                      &macro_kinesis &kp F    &kp G    &kp C     &kp R     &kp L    &bhash
         &kp ESC   &kp A       &kp O     &kp E    &kp U      &kp I   &none    &kp LCTRL &kp LALT                    &kp LGUI  &kp RCTRL  &none &kp D    &kp H    &kp T     &kp N     &kp S    &kp MINUS
-        &kp LSHFT &kp APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &kp HOME &none &none &kp PG_UP &none     &none  &kp B    &kp M    &kp W     &kp Z     &kp FSLH &kp RSHFT
-        &mo 2     &kp &dgrave &ggrave   &kp LEFT &kp RIGHT                &kp BKSP  &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE       &kp UP   &kp DOWN  &kp LBKT  &kp RBKT &mo 2
+        &kp LSHFT &kp APOS    &kp Q     &kp J    &kp K      &kp X         &none     &none     &kp HOME &none &none &kp PG_UP &none     &none  &kp B    &kp M    &kp W     &kp V     &kp Z    &kp RSHFT
+        &mo 2     &dgrave     &ggrave   &kp LEFT &kp RIGHT                &kp BKSP  &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE       &kp UP   &kp DOWN  &kp FSLH  &acaret  &mo 2
         >;
     };
   };

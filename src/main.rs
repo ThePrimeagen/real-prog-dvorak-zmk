@@ -75,7 +75,7 @@ fn main() {
     configs.push(get_config("dllr", "grave"));
     configs.push(get_config("grave", "grave"));
     configs.push(get_config("bslh", "hash"));
-    configs.push(get_config("-", "_"));
+    configs.push(get_config("at", "caret"));
 
     for config in &configs {
         println!("{}", config.behavior);
